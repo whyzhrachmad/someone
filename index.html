@@ -9,7 +9,10 @@
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-            background-color: #fce4ec;
+            background: linear-gradient(135deg, #f1e6e7, #ee9ca7);
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
         }
         .scrapbook {
             width: 90%;
@@ -45,33 +48,48 @@
             position: absolute;
             background: rgba(255, 255, 255, 0.9);
             display: none;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
             padding: 20px;
             box-sizing: border-box;
+            overflow: auto; /* Bisa scroll jika konten panjang */
         }
         .card.open + .content {
             display: flex;
         }
-        .controls {
-            margin-top: 10px;
+        .invitation-header {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            white-space: pre-line; /* Supaya teks "Kepada Yth." tidak terpotong */
+        }
+        .content p {
+            font-size: 16px;
+            margin: 10px 0;
+            text-align: justify;
+        }
+        .content p strong {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <h1>Scrapbook Digital</h1>
+    <h1>Official Invitation Card</h1>
     <div class="scrapbook" id="scrapbook">
         <div class="card" id="card" onclick="openCard()">Klik untuk Membuka Undangan</div>
         <div class="content" id="content">
-            <p>Dengan penuh hormat, saya Achmad Wahyu Ainur Azhari (NRP 2040221093) selaku perwakilan warga HMDTEO ingin mengundang Saudari untuk menghadiri acara "NGOBROL SANTAI" pada :</p>
-            <p><strong>Tanggal:</strong> TBA (sesuai kesepakatan)</p>
-            <p><strong>Tempat:</strong> TBA (sesuai kesepakatan)</p>
-            <p>Acara ini diadakan dengan tujuan agar lebih mengenal sesama. Saya sangat berharap Saudari dapat hadir karena kehadiran Saudari akan sangat berarti bagi saya dan teman-teman seperjuangan.</p>
-            <p>Mohon konfirmasi kehadiran Saudari. Terima kasih banyak 😊</p>
-            <p>Salam hangat,</p>
+            <p class="invitation-header">Kepada Yth. <br>Dennise Atlan Aulia Divari <br> Perwakilan warga HIMKA ITS</p>
+            <p>Dengan hormat,</p>
+            <p>Saya, <strong>Achmad Wahyu Ainur Azhari (NRP 2040221093)</strong>, mewakili warga <strong>HMDTEO</strong>, dengan ini mengundang Saudari untuk menghadiri acara <strong>"Ngobrol Santai"</strong>, yang bertujuan untuk mempererat kebersamaan serta menjalin komunikasi yang lebih baik antara kita.</p>
+            <p><strong>Detail Acara:</strong></p>
+            <p>📅 <strong>Tanggal:</strong> TBA (sesuai kesepakatan)</p>
+            <p>📍 <strong>Tempat:</strong> TBA (sesuai kesepakatan)</p>
+            <p>Kami sangat berharap Saudari dapat meluangkan waktu untuk hadir dalam acara ini, karena kehadiran Saudari akan sangat berarti bagi saya sendiri.</p>
+            <p>Mohon konfirmasi kehadiran melalui kontak whatsapp yang tersedia.</p>
+            <p>Atas perhatian dan waktunya, saya ucapkan terima kasih.</p>
             <p><strong>Achmad Wahyu Ainur Azhari</strong></p>
-            <p>Perwakilan HMDTEO</p>
+            <p>Perwakilan HMDTEO </p>
         </div>
     </div>
     
